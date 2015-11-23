@@ -7,7 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 crawlers = [
-  ["Google", "Crawls Google", {search_operators: "string", search_query: "string"}, "GoogleCrawler"]
+  ["Google", "Crawls Google", {search_operators: "string", search_query: "string"}, "GoogleCrawler"],
+  ["LinkedIn", "Crawls LinkedIn public profiles", {search_query: "string"}, "LinkedinCrawl"]
 ]
 
 crawlers.each do |name, description, input_params, classname|

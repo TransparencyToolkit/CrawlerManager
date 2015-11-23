@@ -14,6 +14,8 @@ gem 'generalscraper'
 gem 'uploadconvert'
 gem 'docsplit'
 gem 'crack'
+gem 'linkedincrawler'
+gem 'linkedinparser'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
