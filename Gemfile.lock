@@ -51,12 +51,20 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
     debug_inspector (0.0.2)
+    docsplit (0.7.6)
+    domain_name (0.5.25)
+      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.6.0)
     ffi (1.9.10)
+    generalscraper (0.0.15)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     i18n (0.7.0)
     jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
@@ -70,13 +78,25 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    mechanize (2.7.3)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0)
+      mime-types (~> 2.0)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.4)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (>= 0.0.9, < 0.2)
     method_source (0.8.2)
     mime-types (2.6.2)
     mini_portile (0.6.2)
     minitest (5.8.3)
     multi_json (1.11.2)
+    net-http-digest_auth (1.4)
+    net-http-persistent (2.9.4)
     nokogiri (1.6.6.3)
       mini_portile (~> 0.6.0)
+    ntlm-http (0.1.1)
     pg (0.18.4)
     pry (0.10.2)
       coderay (~> 1.1.0)
@@ -114,6 +134,7 @@ GEM
       json (~> 1.4)
     requestmanager (0.0.4)
     rubyzip (1.1.7)
+    safe_yaml (1.0.4)
     sass (3.4.19)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -147,11 +168,16 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.1)
+    uploadconvert (0.0.11)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    webrobots (0.1.1)
     websocket (1.2.2)
 
 PLATFORMS
@@ -160,8 +186,13 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
+  crack
+  docsplit
+  generalscraper
   jbuilder (~> 2.0)
   jquery-rails
+  mechanize
+  nokogiri
   pg
   pry
   rails (= 4.2.1)
@@ -172,6 +203,7 @@ DEPENDENCIES
   spring
   turbolinks
   uglifier (>= 1.3.0)
+  uploadconvert
   web-console (~> 2.0)
 
 BUNDLED WITH

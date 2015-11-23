@@ -8,6 +8,12 @@ gem 'pg'
 gem 'pry'
 gem 'requestmanager'
 gem 'selenium-webdriver'
+gem 'mechanize'
+gem 'nokogiri'
+gem 'generalscraper'
+gem 'uploadconvert'
+gem 'docsplit'
+gem 'crack'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

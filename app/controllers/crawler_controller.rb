@@ -9,10 +9,6 @@ class CrawlerController < ApplicationController
       arr.push(param_val)
     end
 
-    #TODO:
-    # Set proxy list on server start and use
-    # Maybe add back decoding/encoding
-
     # Initialize new crawler and run
     c = eval "#{@crawler.classname}.new(*#{params_for_crawler})"
     output = c.run
