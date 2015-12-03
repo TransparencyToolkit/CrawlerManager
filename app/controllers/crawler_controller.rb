@@ -5,7 +5,7 @@ class CrawlerController < ApplicationController
   def crawl
     # Get list of parameters to pass to crawler (in correct order)
     params_for_crawler = @crawler.input_params.inject([]) do |arr, input_param|
-      param_val = params[input_param[0]]
+      param_val = Base64.decode64(params[input_param[0]])
       arr.push(param_val)
     end
 
