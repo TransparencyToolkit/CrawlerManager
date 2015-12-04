@@ -36,7 +36,8 @@ crawlers = [
      :end_date,
      :work_location,
      :current,
-     :timestamp]]
+     :timestamp,
+     :search_terms]]
 ]
 
 crawlers.each do |name, description, input_params, classname, output_fields|
