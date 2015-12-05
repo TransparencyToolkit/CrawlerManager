@@ -7,8 +7,8 @@ class GoogleCrawler
   # Crawl Google
   def run
     @requests = RequestManager.new(nil, [1, 3], 1)
-    g = GeneralScraper.new(@search_operators, @search_query, @requests)
+    g = GeneralScraper.new(@search_operators, @search_query, @requests, nil)
     output = JSON.parse(g.getData)
-    # Change to getting page text/separate parser/crawler
+    # TODO: Add support for proxies and captcha solver
   end
 end
