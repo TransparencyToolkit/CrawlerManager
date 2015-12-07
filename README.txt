@@ -15,3 +15,10 @@ http://0.0.0.0:3000/get_crawler_info?crawler=GoogleCrawler
 
 List all available crawlers:
 http://0.0.0.0:3000/list_crawlers
+
+
+Additional Config-
+To use proxies, set environment variable PROXYLIST to the path to the
+proxylist you want to use.
+
+To solve CAPTCHAs, set environment variable SOLVERDETAILS to your 2Captcha key.

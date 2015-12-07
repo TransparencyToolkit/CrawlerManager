@@ -16,6 +16,9 @@ gem 'docsplit'
 gem 'crack'
 gem 'linkedincrawler'
 gem 'linkedinparser'
+gem 'rmagick'
+gem 'curb'
+gem 'two_captcha'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

@@ -5,11 +5,10 @@ class LinkedinCrawl
 
   # Crawl LinkedIn
   def run
-    # TODO: Set proxy info on start (except interval- that's by data source)
-    # TODO: add support for proxy solver
-    requests_linkedin = RequestManager.new(nil, [1, 3], 1) 
-    requests_google = RequestManager.new(nil, [1, 3], 1) 
-    c = LinkedinCrawler.new(@search_query, 1, requests_linkedin, requests_google, nil)
+    requests_linkedin = RequestManager.new(ENV['PROXYLIST'], [1, 3], 5) 
+    requests_google = RequestManager.new(ENV['PROXYLIST'], [1, 3], 1)
+    captcha_settings = ENV['SOLVERDETAILS'] != nil ? {captcha_key: ENV['SOLVERDETAILS']} : nil
+    c = LinkedinCrawler.new(@search_query, 1, requests_linkedin, requests_google, captcha_settings)
     c.search
     JSON.parse(c.gen_json)
   end

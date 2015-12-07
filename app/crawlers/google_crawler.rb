@@ -6,9 +6,9 @@ class GoogleCrawler
 
   # Crawl Google
   def run
-    @requests = RequestManager.new(nil, [1, 3], 1)
-    g = GeneralScraper.new(@search_operators, @search_query, @requests, nil)
+    @requests = RequestManager.new(ENV['PROXYLIST'], [1, 3], 1)
+    captcha_settings = ENV['SOLVERDETAILS'] != nil ? {captcha_key: ENV['SOLVERDETAILS']} : nil
+    g = GeneralScraper.new(@search_operators, @search_query, @requests, captcha_settings)
     output = JSON.parse(g.getData)
-    # TODO: Add support for proxies and captcha solver
   end
 end
