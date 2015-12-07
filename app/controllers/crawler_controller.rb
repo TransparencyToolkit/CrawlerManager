@@ -12,6 +12,7 @@ class CrawlerController < ApplicationController
     # Initialize new crawler and run
     c = eval "#{@crawler.classname}.new(*#{params_for_crawler})"
     output = c.run
+    move_pics
     
     # Return JSON response
     render json: JSON.pretty_generate(output)
@@ -29,6 +30,16 @@ class CrawlerController < ApplicationController
   end
   
   private
+
+  # Handle pictures
+  def move_pics
+    picdir = ENV['HOME']+"/Data/KG/All_Pics"
+    unless File.directory?(picdir)
+      Dir.mkdir(picdir)
+    end
+    `mv pictures/* #{ENV['HOME']}/Data/KG/All_Pics`
+    `rm -r pictures`
+  end
 
   # Find the matching parser
   def find_crawler
