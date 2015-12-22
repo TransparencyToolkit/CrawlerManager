@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20151120183509) do
 
   create_table "crawlers", force: :cascade do |t|
     t.string   "name"
+    t.string   "icon"
     t.string   "description"
     t.text     "input_params"
     t.string   "classname"
