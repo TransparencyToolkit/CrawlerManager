@@ -20,6 +20,8 @@ gem 'linkedinparser'
 gem 'rmagick'
 gem 'curb'
 gem 'two_captcha'
+gem 'indeedparser'
+gem 'indeedcrawler'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

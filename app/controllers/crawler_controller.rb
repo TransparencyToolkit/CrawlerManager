@@ -4,16 +4,16 @@ class CrawlerController < ApplicationController
   # Process input to API and call appropriate crawler
   def crawl
     # Get list of parameters to pass to crawler (in correct order)
-    params_for_crawler = @crawler.input_params.inject([]) do |arr, input_param|
-      param_val = Base64.decode64(params[input_param[0]])
-      arr.push(param_val)
+    params_for_crawler = Array.new
+    @crawler.input_params.each do |input_param|
+      params_for_crawler.push(Base64.decode64(params[input_param[0]]))
     end
-
+    
     # Initialize new crawler and run
     c = eval "#{@crawler.classname}.new(*#{params_for_crawler})"
     output = c.run
     move_pics
-    
+  
     # Return JSON response
     render json: JSON.pretty_generate(output)
   end
