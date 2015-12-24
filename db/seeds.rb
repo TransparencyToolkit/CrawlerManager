@@ -21,14 +21,8 @@ crawlers = [
      :summary,
      :additional_info,
      :last_updated,
-     :degrees,
-     :military_service,
-     :certifications,
-     :rec_people,
-     :links,
-     :awards,
-     :groups,
-     :fulltext
+     :fulltext,
+     :time_scraped
    ]],
   ["LinkedIn", "icon-linkedin", "Crawls LinkedIn public profiles", {search_query: "string"}, "LinkedinCrawl", [
      :profile_url,
