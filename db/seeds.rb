@@ -7,12 +7,24 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 crawlers = [
-  ["Google", "Crawls Google", {search_operators: "string", search_query: "string"}, "GoogleCrawler", [
+  ["Google", "icon-google", "Crawls Google search results", {search_operators: "string", search_query: "string"}, "GoogleCrawler", [
      :text,
      :url,
      :date_retrieved,
      :title]],
-  ["LinkedIn", "Crawls LinkedIn public profiles", {search_query: "string"}, "LinkedinCrawl", [
+  ["Indeed", "icon-linkedin", "Collects Indeed resumes", {search_query: "string", location: "string"}, "IndeedCrawl", [
+     :url,
+     :name,
+     :location,
+     :current_title,
+     :skills,
+     :summary,
+     :additional_info,
+     :last_updated,
+     :fulltext,
+     :time_scraped
+   ]],
+  ["LinkedIn", "icon-linkedin", "Crawls LinkedIn public profiles", {search_query: "string"}, "LinkedinCrawl", [
      :profile_url,
      :full_name,
      :first_name,
@@ -40,6 +52,6 @@ crawlers = [
      :search_terms]]
 ]
 
-crawlers.each do |name, description, input_params, classname, output_fields|
-  Crawler.create(name: name, description: description, input_params: input_params, classname: classname, output_fields: output_fields)
+crawlers.each do |name, icon, description, input_params, classname, output_fields|
+  Crawler.create(name: name, icon: icon, description: description, input_params: input_params, classname: classname, output_fields: output_fields)
 end
