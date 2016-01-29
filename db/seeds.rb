@@ -7,6 +7,22 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 crawlers = [
+  ["Local Files", "icon-google", "OCRs, extracts metadata from, and loads in files on your local computer", {directory: "file"},
+   "LoadFiles", [
+     :text,
+     :full_path,
+     :rel_path,
+     :formatted_name,
+     :filetype,
+     :author,
+     :creator,
+     :producer,
+     :title,
+     :subject,
+     :date,
+     :keywords,
+     :length
+   ]],
   ["Google", "icon-google", "Crawls Google search results", {search_operators: "string", search_query: "string"}, "GoogleCrawler", [
      :text,
      :url,
