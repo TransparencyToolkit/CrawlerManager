@@ -22,6 +22,8 @@ gem 'curb'
 gem 'two_captcha'
 gem 'indeedparser'
 gem 'indeedcrawler'
+gem 'parsefile'
+gem 'dircrawl'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
