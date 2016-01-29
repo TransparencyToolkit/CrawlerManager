@@ -21,7 +21,8 @@ crawlers = [
      :subject,
      :date,
      :keywords,
-     :length
+     :length,
+     :folders
    ]],
   ["Google", "icon-google", "Crawls Google search results", {search_operators: "string", search_query: "string"}, "GoogleCrawler", [
      :text,
