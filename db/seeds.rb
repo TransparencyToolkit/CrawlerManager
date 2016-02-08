@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 crawlers = [
-  ["Local Files", "icon-google", "OCRs, extracts metadata from, and loads in files on your local computer", {directory: "file"},
+  ["Files or Folders", "icon-folder", "Load files from your computer and extract data", {directory: "file"},
    "LoadFiles", [
      :text,
      :full_path,
@@ -23,12 +23,12 @@ crawlers = [
      :keywords,
      :length
    ]],
-  ["Google", "icon-google", "Crawls Google search results", {search_operators: "string", search_query: "string"}, "GoogleCrawler", [
+  ["Google", "icon-google", "Crawls search results from Google.com", {search_operators: "string", search_query: "string"}, "GoogleCrawler", [
      :text,
      :url,
      :date_retrieved,
      :title]],
-  ["Indeed", "icon-linkedin", "Collects Indeed resumes", {search_query: "string", location: "string"}, "IndeedCrawl", [
+  ["Indeed", "icon-indeed", "Crawls job resumes from Indeed.com", {search_query: "string", location: "string"}, "IndeedCrawl", [
      :url,
      :name,
      :location,
@@ -40,7 +40,7 @@ crawlers = [
      :fulltext,
      :time_scraped
    ]],
-  ["LinkedIn", "icon-linkedin", "Crawls LinkedIn public profiles", {search_query: "string"}, "LinkedinCrawl", [
+  ["LinkedIn", "icon-linkedin", "Crawls public profiles from LinkedIn.com", {search_query: "string"}, "LinkedinCrawl", [
      :profile_url,
      :full_name,
      :first_name,
