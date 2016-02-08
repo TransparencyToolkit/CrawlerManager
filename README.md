@@ -10,7 +10,7 @@ Make sure you have the proper system dependencies with
 - On Debian, do the following:
   - `sudo apt-get install postgresql postgresql-client sqlite3 libsqlite3-dev libpq-dev ruby-pg`
   - Configure [PostGreSQL](https://wiki.debian.org/PostgreSql)
-- Get the code `git clone https://github.com/TransparencyToolkit/DocumentLoader`
+- Get the code `git clone https://github.com/TransparencyToolkit/Harvester`
 - Install Ruby dependencies `bundle install`
 
 ## Setup
