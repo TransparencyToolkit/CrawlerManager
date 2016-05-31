@@ -38,7 +38,13 @@ crawlers = [
      :additional_info,
      :last_updated,
      :fulltext,
-     :time_scraped
+     :time_scraped,
+     :company,
+     :job_title,
+     :start_date,
+     :end_date,
+     :job_description,
+     :company_location
    ]],
   ["LinkedIn", "icon-linkedin", "Crawls public profiles from LinkedIn.com", {search_query: "string"}, "LinkedinCrawl", [
      :profile_url,
