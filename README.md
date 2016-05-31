@@ -18,6 +18,11 @@ Make sure you have the proper system dependencies with
 - Create the databases `rake db:create:all`
 - Reset existing databases `rake db:reset`
 
+**WARNING**
+
+Currently, for Harvester to save data, you need to have the path `/home/user/Data/KG/` and `/home/user/Data/KG/All_Pics/` to exist. This is kludgy and will be configurable soon!
+
+
 ## Running CrawlerManager
 
 - Run the app by typing `rails server -p 9506`
