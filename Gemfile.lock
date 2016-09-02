@@ -79,7 +79,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
-    linkedincrawler (0.0.15)
+    linkedincrawler (0.0.14)
     linkedinparser (0.1.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -205,7 +205,7 @@ DEPENDENCIES
   indeedparser
   jbuilder (~> 2.0)
   jquery-rails
-  linkedincrawler
+  linkedincrawler (<= 0.0.14)
   linkedinparser
   mechanize
   nokogiri
@@ -227,4 +227,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.11.2
+   1.12.5

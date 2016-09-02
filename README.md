@@ -1,16 +1,17 @@
 CrawlerManager
 ==============
 
-API for running and managing crawlers
+API for running and managing crawlers and parsing results
+
+CrawlerManager can be used in combination with [Harvester](https://github.com/TransparencyToolkit/Harvester) web interface to run queries and load results.
 
 ## Installing
 
 Make sure you have the proper system dependencies with
 
 - On Debian, do the following:
-  - `sudo apt-get install postgresql postgresql-client sqlite3 libsqlite3-dev libpq-dev ruby-pg`
-  - Configure [PostGreSQL](https://wiki.debian.org/PostgreSql)
-- Get the code `git clone https://github.com/TransparencyToolkit/Harvester`
+  - `sudo apt-get install sqlite3 libsqlite3-dev`
+- Get the code `git clone https://github.com/TransparencyToolkit/CrawlerManager`
 - Install Ruby dependencies `bundle install`
 
 ## Setup
