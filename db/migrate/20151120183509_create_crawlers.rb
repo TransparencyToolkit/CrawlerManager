@@ -7,6 +7,7 @@ class CreateCrawlers < ActiveRecord::Migration
       t.text :input_params
       t.string :classname
       t.string :output_fields
+      t.text :id_fields
 
       t.timestamps null: false
     end

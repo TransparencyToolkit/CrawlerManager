@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20151120183509) do
     t.text     "input_params"
     t.string   "classname"
     t.string   "output_fields"
+    t.text     "id_fields"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end

@@ -22,12 +22,13 @@ crawlers = [
      :date,
      :keywords,
      :length
-   ]],
+   ], { primary_id_field: "rel_path" }
+  ],
   ["Google", "icon-google", "Crawls search results from Google.com", {search_operators: "string", search_query: "string"}, "GoogleCrawler", [
      :text,
      :url,
      :date_retrieved,
-     :title]],
+     :title], {}],
   ["Indeed", "icon-indeed", "Crawls job resumes from Indeed.com", {search_query: "string", location: "string"}, "IndeedCrawl", [
      :url,
      :name,
@@ -45,7 +46,9 @@ crawlers = [
      :end_date,
      :job_description,
      :company_location
-   ]],
+   ], { primary_id_field: "url",
+        secondary_id_field: ["company", "job_title", "start_date"],
+        get_id_after: "indeed.com/"}],
   ["LinkedIn", "icon-linkedin", "Crawls public profiles from LinkedIn.com", {search_query: "string"}, "LinkedinCrawl", [
      :profile_url,
      :full_name,
@@ -71,9 +74,13 @@ crawlers = [
      :work_location,
      :current,
      :timestamp,
-     :search_terms]]
+     :search_terms],
+   { primary_id_field: "profile_url",
+     secondary_id_field: ["company", "title", "start_date"],
+     get_id_after: "linkedin.com/pub"}
+  ]
 ]
 
-crawlers.each do |name, icon, description, input_params, classname, output_fields|
-  Crawler.create(name: name, icon: icon, description: description, input_params: input_params, classname: classname, output_fields: output_fields)
+crawlers.each do |name, icon, description, input_params, classname, output_fields, id_fields|
+  Crawler.create(name: name, icon: icon, description: description, input_params: input_params, classname: classname, output_fields: output_fields, id_fields: id_fields)
 end
