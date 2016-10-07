@@ -3,8 +3,12 @@ class CrawlerController < ApplicationController
 
   # Process input to API and call appropriate crawler
   def crawl
+    # Match up with Harvester instance and object
+    selector_tag = Base64.decode64(params["selector-tag"])
+    harvester_path = Base64.decode64(params["harvester-path"])
+    
     # Get list of parameters to pass to crawler (in correct order)
-    params_for_crawler = Array.new
+    params_for_crawler = [harvester_path, selector_tag]
     @crawler.input_params.each do |input_param|
       params_for_crawler.push(Base64.decode64(params[input_param[0]]))
     end

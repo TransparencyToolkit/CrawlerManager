@@ -22,7 +22,7 @@ gem 'curb'
 gem 'two_captcha'
 gem 'indeedparser'
 gem 'indeedcrawler'
-gem 'parsefile'
+#gem 'parsefile'
 gem 'dircrawl'
 
 # Use SCSS for stylesheets

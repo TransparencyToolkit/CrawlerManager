@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'crawlers' => 'crawler#crawl'
   get 'get_crawler_info' => 'crawler#get_crawler_info'
   get 'list_crawlers' => 'crawler#list_crawlers'
+  post 'relay_results' => 'crawler#relay_results'
   
 
   # Example of regular route:
