@@ -24,7 +24,7 @@ crawlers = [
      :length
    ], { primary_id_field: "rel_path" }
   ],
-  ["Google", "icon-google", "Crawls search results from Google.com", {search_operators: "string", search_query: "string"}, "GoogleCrawler", [
+  ["Google", "icon-google", "Crawls search results from Google.com", {search_operators: "string", search_query: "string"}, "GoogleCrawl", [
      :text,
      :url,
      :date_retrieved,
