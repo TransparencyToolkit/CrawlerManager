@@ -28,7 +28,8 @@ crawlers = [
      :text,
      :url,
      :date_retrieved,
-     :title], {}],
+     :page_title], { primary_id_field: "url",
+                secondary_id_field: ["page_title"]}],
   ["Indeed", "icon-indeed", "Crawls job resumes from Indeed.com", {search_query: "string", location: "string"}, "IndeedCrawl", [
      :url,
      :name,

@@ -15,11 +15,10 @@ class CrawlerController < ApplicationController
     
     # Initialize new crawler and run
     c = eval "#{@crawler.classname}.new(*#{params_for_crawler})"
-    output = c.run
+    c.run
     move_pics
-  
-    # Return JSON response
-    render json: JSON.pretty_generate(output)
+
+    render json: JSON.pretty_generate(@crawler.attributes)
   end
 
   # Get the info for specific parser

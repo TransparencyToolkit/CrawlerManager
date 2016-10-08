@@ -18,7 +18,7 @@ class GoogleCrawl
       captcha_settings = ENV['SOLVERDETAILS'] != nil ? {captcha_key: ENV['SOLVERDETAILS']} : nil
 
       # Scrape
-      g = GeneralScraper.new(@search_operators, @search_query, @requests, captcha_settings, cm_hash)
+      g = GeneralScraper.new(@search_operators, @search_query, requests_google, captcha_settings, cm_hash)
       g.getData
     end
   end
