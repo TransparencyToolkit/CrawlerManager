@@ -11,8 +11,10 @@ class IndeedCrawl
    cm_hash = {crawler_manager_url: @harvester_url,
               selector_id: @selector_id}
    Thread.new do
-     i = IndeedCrawler.new(@search_query, @location, ENV['PROXYLIST'], [0.2, 0.3], 1, cm_hash)
-     i.collect_it_all
+     Headless.ly do
+       i = IndeedCrawler.new(@search_query, @location, ENV['PROXYLIST'], [0.2, 0.3], 1, cm_hash)
+       i.collect_it_all
+     end
    end
   end
 end
