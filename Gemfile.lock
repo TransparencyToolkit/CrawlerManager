@@ -56,21 +56,21 @@ GEM
       safe_yaml (~> 1.0.0)
     curb (0.9.3)
     debug_inspector (0.0.2)
-    dircrawl (0.0.10)
+    dircrawl (0.0.12)
     docsplit (0.7.6)
-    domain_name (0.5.20160826)
+    domain_name (0.5.20161021)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.14)
-    generalscraper (0.0.23)
+    generalscraper (0.0.26)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     headless (2.3.1)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.7.0)
-    indeedcrawler (0.0.4)
+    indeedcrawler (0.0.5)
     indeedparser (0.0.8)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -80,7 +80,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
-    linkedincrawler (0.0.18)
+    linkedincrawler (0.0.19)
     linkedinparser (0.1.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -182,7 +182,7 @@ GEM
     two_captcha (1.2.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.0.2)
+    uglifier (3.0.3)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
@@ -225,7 +225,7 @@ DEPENDENCIES
   rmagick
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  selenium-webdriver
+  selenium-webdriver (~> 2.53.4)
   spring
   sqlite3
   turbolinks
