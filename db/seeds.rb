@@ -44,7 +44,8 @@ crawlers = [
      :reply_count,
      :mention_names,
      :time_collected,
-     :mention_uids
+     :mention_uids,
+     :date_searchable
    ], { primary_id_field: "tweet_link",
         get_id_after: "twitter.com/" }],
   ["Indeed", "icon-indeed", "Crawls job resumes from Indeed.com", {search_query: "string", location: "string"}, "IndeedCrawl", [
