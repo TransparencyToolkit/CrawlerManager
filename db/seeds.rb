@@ -43,6 +43,7 @@ crawlers = [
      :favorite_count,
      :reply_count,
      :mention_names,
+     :time_collected,
      :mention_uids
    ], { primary_id_field: "tweet_link",
         get_id_after: "twitter.com/" }],
