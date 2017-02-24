@@ -11,3 +11,5 @@
 /log/*
 !/log/.keep
 /tmp
+db/development.sqlite3
+Gemfile.lock
