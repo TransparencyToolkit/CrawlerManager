@@ -30,7 +30,7 @@ crawlers = [
      :date_retrieved,
      :page_title], { primary_id_field: "url",
                      secondary_id_field: ["page_title"]}],
-  ["Twitter", "icon-google", "Crawls Twitter search", {search_query: "string", search_operators: "string"}, "TwitterCrawl", [
+  ["Twitter", "icon-twitter", "Crawls Twitter search", {search_query: "string", search_operators: "string"}, "TwitterCrawl", [
      :tweet_text,
      :username,
      :fullname,
