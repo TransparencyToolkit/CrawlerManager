@@ -6,7 +6,7 @@ class TwitterCrawl
     @selector_id = selector_id
   end
 
-  # Crawl LinkedIn
+  # Crawl Twitter Search
   def run
     Thread.new do
       # Setup incremental result passing hash
