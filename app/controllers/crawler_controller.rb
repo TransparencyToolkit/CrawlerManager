@@ -14,7 +14,7 @@ class CrawlerController < ApplicationController
     end
     
     # Initialize new crawler and run
-    c = eval "#{@crawler.classname}.new(*#{params_for_crawler})"
+    c = Module.const_get(@crawler.classname).new(*params_for_crawler)
     c.run
     move_pics
 
