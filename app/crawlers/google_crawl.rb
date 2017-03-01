@@ -6,7 +6,7 @@ class GoogleCrawl
     @selector_id = selector_id
   end
 
-  # Crawl LinkedIn
+  # Crawl Google
   def run
     Thread.new do
       # Setup incremental result passing hash
