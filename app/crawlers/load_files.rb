@@ -29,7 +29,7 @@ class LoadFiles
       # Extras
       extras = lambda do |out_dir|
       end
-      d = DirCrawl.new(@dir, out_dir, "_terms", false, block, include, extras, "debug", cm_hash, @dir, out_dir, @tika)
+      d = DirCrawl.new(@dir, out_dir, "_terms", false, block, include, extras, "log", cm_hash, @dir, out_dir, @tika)
     end
   end
 end

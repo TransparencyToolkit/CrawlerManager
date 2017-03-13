@@ -28,6 +28,7 @@ gem 'mimemagic'
 gem 'headless'
 gem 'twittercrawler'
 gem 'twitter-text'
+gem 'tsjobcrawler'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

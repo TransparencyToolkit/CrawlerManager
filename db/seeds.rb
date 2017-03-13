@@ -24,6 +24,30 @@ crawlers = [
      :length
    ], { primary_id_field: "rel_path" }
   ],
+  ["Cleared Job Listings", "icon-tsjobs", "Crawls job listings for jobs that require security clearance", {search_query: "string"}, "TsjobCrawl", [
+     :url,
+     :company_name,
+     :company_listing_link,
+     :location,
+     :country,
+     :job_title,
+     :job_description,
+     :job_description_plaintext,
+     :required_travel,
+     :salary,
+     :salary_notes,
+     :job_category,
+     :group_id,
+     :job_number,
+     :required_experience,
+     :employment_status,
+     :required_clearance,
+     :work_environment,
+     :posting_date,
+     :closing_date,
+     :contact_person,
+     :html
+   ], { primary_id_field: "url" }],
   ["Google", "icon-google", "Crawls search results from Google.com", {search_operators: "string", search_query: "string"}, "GoogleCrawl", [
      :text,
      :url,

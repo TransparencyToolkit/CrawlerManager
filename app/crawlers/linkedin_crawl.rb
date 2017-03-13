@@ -14,7 +14,7 @@ class LinkedinCrawl
 
       requests_linkedin = RequestManager.new(ENV['PROXYLIST'], [1, 3], 1)
 #      Headless.ly do
-        # Setup request assing info 
+        # Setup request info 
         requests_google = RequestManager.new(ENV['PROXYLIST'], [10, 30], 1)
         requests_google2 = RequestManager.new(ENV['PROXYLIST'], [10, 30], 1)
         captcha_settings = ENV['SOLVERDETAILS'] != nil ? {captcha_key: ENV['SOLVERDETAILS']} : nil
