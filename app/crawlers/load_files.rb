@@ -1,8 +1,8 @@
 class LoadFiles
   def initialize(harvester_url, selector_id, dir)
     @dir = dir
-	# TODO: need a method to pass "tika" value from a global/environement var
     @tika = nil
+    
     @harvester_url = harvester_url
     @selector_id = selector_id
   end
@@ -23,13 +23,18 @@ class LoadFiles
         require 'parsefile'
       end
 
-      # Output Directory
-      out_dir = @dir+"_output"
-
+      # Path input hash
+      path_params = { path: @dir,
+                      output_dir: "#{@dir}_output",
+                      ignore_includes: "_terms",
+                      failure_mode: "log"
+                    }
+      
       # Extras
       extras = lambda do |out_dir|
       end
-      d = DirCrawl.new(@dir, out_dir, "_terms", false, block, include, extras, "log", cm_hash, @dir, out_dir, @tika)
+      
+      DirCrawl.new(path_params, block, include, extras, cm_hash, path_params[:path], path_params[:output_dir], @tika)
     end
   end
 end
